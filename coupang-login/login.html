@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>쿠팡 로그인</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <div class="logo">
+        <img src="logo.jpg" alt="Coupang" />
+      </div>
+
+      <ul class="login-tabs">
+        <li class="active">이메일 로그인</li>
+        <li>휴대폰번호 로그인</li>
+        <li>QR코드 로그인</li>
+      </ul>
+
+      <form class="login-form">
+        <div class="input-group">
+          <div class="input-row">
+            <span class="icon mail-icon"></span>
+            <input type="email" placeholder="아이디(이메일)" required />
+          </div>
+          <div class="input-row">
+            <span class="icon lock-icon"></span>
+            <input type="password" placeholder="비밀번호" required />
+            <span class="icon eye-icon"></span>
+          </div>
+        </div>
+
+        <div class="login-helper">
+          <label><input type="checkbox" /> 자동로그인</label>
+          <a href="#">아이디(이메일)/비밀번호 찾기 ></a>
+        </div>
+
+        <button type="submit" class="btn-login">로그인</button>
+      </form>
+
+      <div class="divider"></div>
+
+      <button type="button" class="btn-signup">회원가입</button>
+
+      <footer>
+        <p>©Coupang Corp. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
