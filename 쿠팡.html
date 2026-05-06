@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>쿠팡 로그인 클론</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        background-color: #fff;
+        font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      }
+      .container {
+        width: 460px;
+        text-align: center;
+      }
+
+      /* 로고 */
+      .logo {
+        margin-bottom: 40px;
+      }
+      .logo img {
+        width: 180px;
+      }
+
+      /* 탭 메뉴 */
+      .login-tabs {
+        display: flex;
+        list-style: none;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 25px;
+        justify-content: center;
+      }
+      .login-tabs li {
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #555;
+        cursor: pointer;
+        position: relative;
+      }
+      .login-tabs li.active {
+        color: #0074e9;
+        font-weight: bold;
+      }
+      /* 탭 하단 파란색 강조선 */
+      .login-tabs li.active::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #0074e9;
+      }
+      .n-badge {
+        background-color: #e52528;
+        color: #fff;
+        font-size: 10px;
+        padding: 1px 3px;
+        border-radius: 2px;
+        margin-left: 3px;
+        vertical-align: middle;
+      }
+
+      /* 입력창 영역 */
+      .input-box {
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        margin-bottom: 8px; /* 입력창 사이 간격 */
+      }
+      .icon {
+        width: 20px;
+        opacity: 0.3;
+        margin-right: 10px;
+      }
+      .input-box input {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+      }
+
+      /* 체크박스 및 찾기 */
+      .login-helper {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        color: #555;
+        margin: 15px 0 25px;
+      }
+      .login-helper a {
+        text-decoration: none;
+        color: #0074e9;
+      }
+
+      /* 버튼 */
+      .btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      .btn-login {
+        background-color: #4285f4; /* 예시 이미지의 밝은 파란색 */
+        color: #fff;
+        border: none;
+      }
+      .btn-signup {
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+
+      footer {
+        margin-top: 50px;
+        font-size: 12px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.jpg" width="500" height="100" alt="Coupang" />
+      </div>
+
+      <ul class="login-tabs">
+        <li class="active">이메일 로그인</li>
+        <li>휴대폰번호 로그인 <span class="n-badge">N</span></li>
+        <li>QR코드 로그인</li>
+      </ul>
+
+      <form>
+        <div class="input-box">
+          <span class="icon">✉️</span>
+          <input type="text" placeholder="아이디 (이메일)" />
+        </div>
+        <div class="input-box">
+          <span class="icon">🔒</span>
+          <input type="password" placeholder="비밀번호" />
+        </div>
+
+        <div class="login-helper">
+          <label><input type="checkbox" /> 자동 로그인</label>
+          <a href="#">아이디 · 비밀번호 찾기 ></a>
+        </div>
+
+        <button type="button" class="btn btn-login">로그인</button>
+        <button type="button" class="btn btn-signup">회원가입</button>
+      </form>
+
+      <footer>
+        <p>&copy;Coupang Corp. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
